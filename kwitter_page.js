@@ -2,13 +2,13 @@
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyDZhw-tQkAvNAp0vCuUsrWM0i8X99iEElI",
-  authDomain: "kwitter-c05af.firebaseapp.com",
-  databaseURL: "https://kwitter-c05af-default-rtdb.firebaseio.com",
-  projectId: "kwitter-c05af",
-  storageBucket: "kwitter-c05af.appspot.com",
-  messagingSenderId: "504356234718",
-  appId: "1:504356234718:web:1435a6c3f04ed865ace94f",
+  apiKey: "AIzaSyCs_cXwxfXAitTDVgsoBV7mkzs9OXOL0Jw",
+  authDomain: "kwitter2-51029.firebaseapp.com",
+  databaseURL: "https://kwitter2-51029-default-rtdb.firebaseio.com",
+  projectId: "kwitter2-51029",
+  storageBucket: "kwitter2-51029.appspot.com",
+  messagingSenderId: "412259820331",
+  appId: "1:412259820331:web:590b08b1e66611183c9b6e",
 };
 
 // Initialize Firebase
@@ -50,9 +50,10 @@ function logout() {
   localStorage.removeItem("Username");
   window.location = "index.html";
 }
-user_name = localStorage.getItem("Username");
-room_name = localStorage.getItem("room_name");
+
 function send() {
+  user_name = localStorage.getItem("Username");
+  room_name = localStorage.getItem("room_name");
   msg = document.getElementById("msg").value;
   firebase.database().ref(room_name).push({
     message: msg,
